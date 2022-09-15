@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 const routes:Routes =[
   {path:'',component: UsersComponent,
@@ -20,7 +21,8 @@ const routes:Routes =[
 
 @NgModule({
   declarations: [
-    UsersComponent, HomeComponent,SidebarComponent,ToolbarComponent
+    UsersComponent, HomeComponent,SidebarComponent,
+    ToolbarComponent,SidenavComponent
   ],
   imports: [
     CommonModule,

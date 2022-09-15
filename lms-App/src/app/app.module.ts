@@ -5,10 +5,7 @@ import { RouterModule,Routes } from '@angular/router';
 import { SharedmaterialModule } from 'src/sharedMaterial.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './users/home/home.component';
-import { SidebarComponent } from './users/sidebar/sidebar.component';
-import { ToolbarComponent } from './users/toolbar/toolbar.component';
-import { UsersComponent } from './users/users.component';
+
 
 
 const routes:Routes=[
