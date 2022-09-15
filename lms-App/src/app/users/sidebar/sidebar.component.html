@@ -2,27 +2,29 @@
 
 <div >
   <app-toolbar></app-toolbar>
-<div class="sm:visible ">
+<div class="invisible md:visible ">
    <div class="fixed top-14 my-2 left-0 h-screen w-12 m-0 flex flex-col
  bg-gray-400 text-white shadow-lg">
 
-<div #sidebaritem>
-<button>
+<div  #sidebaritem>
+  <ul class="my-10 space-y-10" >
+    <li><button>
   <mat-icon class="">login</mat-icon>
-</button>
-<button>
+</button></li>
+
+<li><button>
   <mat-icon class="">play_circle_outline</mat-icon>
-</button>
-<button>
+</button></li>
+<li><button>
   <mat-icon class="">subject</mat-icon>
-</button>
-<button>
-  <mat-icon class="">forum</mat-icon>
-</button>
-<mat-icon class="">settings</mat-icon>
+</button></li>
+<li ><button>
+  <mat-icon class="">settings</mat-icon>
+</button></li>
+  </ul>
+
 </div>
-</div>
-<app-sidenav></app-sidenav>
+<!-- <app-sidenav></app-sidenav> -->
 </div>
 
 </div>
