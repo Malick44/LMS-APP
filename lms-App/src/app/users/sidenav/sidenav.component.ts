@@ -3,36 +3,36 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
 
-const SMALL_WIDTH_BREAKPOINT = 720;
+const SMALL_WIDTH_BREAKPOINT = 768;
+
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  showFiller = true;
 
   public isScreenSmall!: boolean;
-  sidenav: any;
-mode: any;
-toggleSidenav: any;
 
 
+  isDarkTheme: boolean = false;
+  dir: string = 'ltr';
 
   constructor(
     private breakpointObserver: BreakpointObserver,
 
     private router: Router) { }
 
-  //@ViewChild(MatSidenav) sidenav: MatSidenav;
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
 
-  // toggleTheme() {
-  //   this.isDarkTheme = !this.isDarkTheme;
-  // }
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+  }
 
-  // toggleDir() {
-  //   this.dir = this.dir == 'ltr' ? 'rtl' : 'ltr';
-  // }
+  toggleDir() {
+    this.dir = this.dir == 'ltr' ? 'rtl' : 'ltr';
+  }
 
   ngOnInit(): void {
     this.breakpointObserver

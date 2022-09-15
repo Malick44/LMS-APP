@@ -5,6 +5,7 @@ import { RouterModule,Routes } from '@angular/router';
 import { SharedmaterialModule } from 'src/sharedMaterial.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -25,7 +26,9 @@ const routes:Routes=[
     BrowserModule,
     AppRoutingModule,
     SharedmaterialModule,
+    BrowserAnimationsModule,
     HttpClientModule,
+
     RouterModule.forRoot(routes)
 
   ],

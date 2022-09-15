@@ -8,12 +8,14 @@ import { UsersComponent } from './users.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatSidenav } from '@angular/material/sidenav';
+
 
 const routes:Routes =[
   {path:'',component: UsersComponent,
   children:[
     {path: 'Home', component:HomeComponent},
-
+     //{path: "dev", component:SidenavComponent}
 ]},
 
   {path: '**', redirectTo: ''}
