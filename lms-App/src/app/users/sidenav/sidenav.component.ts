@@ -2,6 +2,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
+import { NavigationRoute } from '../navigationRoute';
 
 const SMALL_WIDTH_BREAKPOINT = 768;
 
@@ -14,6 +15,7 @@ export class SidenavComponent implements OnInit {
 
   public isScreenSmall!: boolean;
   showFiller = false;
+  navigationroute!:NavigationRoute;
 
   isDarkTheme: boolean = false;
   dir: string = 'ltr';

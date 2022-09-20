@@ -32,33 +32,35 @@ bg-gray-400 text-white shadow-lg" >
 </app-toolbar>
 
 <mat-drawer-container class="bg-white app-container font-sans text-red-800 " autosize>
-  <mat-drawer #drawer class=" mat-elevation-z10  left-0 h-screen  flex flex-col
+  <mat-drawer #drawer class=" mat-elevation-z20 left-0 h-screen  flex flex-col
   text-black shadow-lg" [opened]="!isScreenSmall"
   [mode]="isScreenSmall ? 'push' : 'side'">
 
     <!-- <mat-toolbar class="  bg-blue-600 mat-elevation-z10 "*ngIf="showFiller" >
      Dashboard
     </mat-toolbar> -->
+
+
+
+
 <mat-list-item>
+  <mat-list-item>
 
-<mat-icon (click)="showFiller = !showFiller" mat-raised-button>login</mat-icon>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      >>>
-    </button>
-</mat-list-item>
+    </mat-list-item>
+  <mat-icon >login</mat-icon>
+      <p *ngIf="showFiller">Click here to enter</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon >login</mat-icon>
 
-
+    </mat-list-item>
 
   </mat-drawer>
-
-
-
-
-
       <mat-toolbar class=" bg-cyan-400 mat-elevation-z10  fixed" >
-
-        <button> >>></button>
+        <div *ngIf="drawer.opened && showFiller">
+          <button (click)="showFiller = !showFiller" mat-raised-button> <- </button></div>
+          <div *ngIf="drawer.opened && !showFiller">
+            <button (click)="showFiller = !showFiller" mat-raised-button> -> </button></div>
       </mat-toolbar>
       <div class="app-sidenav-content">
     <div class="wrapper">

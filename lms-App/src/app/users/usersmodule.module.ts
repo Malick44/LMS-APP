@@ -9,13 +9,22 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatSidenav } from '@angular/material/sidenav';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { CourseComponent } from './course/course.component';
+import { TestComponent } from './test/test.component';
+import { RatingsComponent } from './ratings/ratings.component';
+import { InstructorComponent } from './instructor/instructor.component';
 
 
 const routes:Routes =[
   {path:'',component: UsersComponent,
   children:[
     {path: 'Home', component:HomeComponent},
-     //{path: "dev", component:SidenavComponent}
+    {path: "login", component:LoginComponent},
+    {path: "register", component:RegisterComponent},
+    {path: "course", component:CourseComponent},
+    {path: "test", component:TestComponent}
 ]},
 
   {path: '**', redirectTo: ''}
@@ -24,7 +33,7 @@ const routes:Routes =[
 @NgModule({
   declarations: [
     UsersComponent, HomeComponent,SidebarComponent,
-    ToolbarComponent,SidenavComponent
+    ToolbarComponent,SidenavComponent, LoginComponent, RegisterComponent, CourseComponent, TestComponent, RatingsComponent, InstructorComponent
   ],
   imports: [
     CommonModule,
