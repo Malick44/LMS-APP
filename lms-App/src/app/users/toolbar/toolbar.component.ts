@@ -10,7 +10,7 @@ export class ToolbarComponent implements OnInit {
   @Output() toggleTheme = new EventEmitter<void>();
   @Output() toggleDir = new EventEmitter<void>();
 
-
+loggedInUser!:string;
 
 openAddContactDialog() {
 throw new Error('Method not implemented.');
@@ -20,6 +20,7 @@ throw new Error('Method not implemented.');
   constructor() { }
 
   ngOnInit(): void {
+    this.loggedInUser= 'Roberto';
   }
 
 }

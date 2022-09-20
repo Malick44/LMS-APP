@@ -13,7 +13,7 @@ const SMALL_WIDTH_BREAKPOINT = 768;
 export class SidenavComponent implements OnInit {
 
   public isScreenSmall!: boolean;
-
+  showFiller = false;
 
   isDarkTheme: boolean = false;
   dir: string = 'ltr';
@@ -39,6 +39,7 @@ export class SidenavComponent implements OnInit {
       .observe([`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`])
       .subscribe((state: BreakpointState) => {
         this.isScreenSmall = state.matches;
+        this.showFiller=true;
       });
 
 
