@@ -8,13 +8,14 @@ import { UsersComponent } from './users.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { MatSidenav } from '@angular/material/sidenav';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CourseComponent } from './course/course.component';
 import { TestComponent } from './test/test.component';
 import { RatingsComponent } from './ratings/ratings.component';
 import { InstructorComponent } from './instructor/instructor.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 const routes:Routes =[
@@ -33,12 +34,15 @@ const routes:Routes =[
 @NgModule({
   declarations: [
     UsersComponent, HomeComponent,SidebarComponent,
-    ToolbarComponent,SidenavComponent, LoginComponent, RegisterComponent, CourseComponent, TestComponent, RatingsComponent, InstructorComponent
+    ToolbarComponent,SidenavComponent, LoginComponent,
+     RegisterComponent, CourseComponent, TestComponent,
+      RatingsComponent, InstructorComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     SharedmaterialModule,
+    FormsModule,
     RouterModule.forChild(routes)
 
   ]
