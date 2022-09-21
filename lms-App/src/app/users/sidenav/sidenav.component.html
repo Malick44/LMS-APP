@@ -1,28 +1,46 @@
-
-<app-toolbar (toggleSidenav)="drawer.toggle()" class="">
+<div class="">
+  <app-toolbar (toggleSidenav)="drawer.toggle()" class="">
 </app-toolbar>
+</div>
 
-<mat-drawer-container class="bg-white app-container font-sans text-red-800 " autosize>
-  <mat-drawer #drawer class=" mat-elevation-z20 left-0 h-screen  flex flex-col
-  text-black shadow-lg" [opened]="!isScreenSmall"
+
+<mat-drawer-container class=" bg-white app-container font-sans text-red-800 " autosize>
+  <mat-drawer #drawer class=" bg-slate-100 left-0 h-screen  flex flex-col
+ " [opened]="!isScreenSmall"
   [mode]="isScreenSmall ? 'push' : 'side'">
 
-  <mat-list>
-    <mat-list-item>Item 1</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 2</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 3</mat-list-item>
-  </mat-list>
+  <mat-list >
+    <mat-list-item class="top-">
+      <mat-icon class="text-black"> login</mat-icon>
+    </mat-list-item>
+     <span>....</span>
+    <mat-divider ></mat-divider>
+    <mat-list-item>
+      <mat-icon class="text-black"> login</mat-icon>
+    </mat-list-item>
+     <span>....</span>
+    <mat-divider ></mat-divider>
+    <mat-list-item>
+      <mat-icon class="text-black"> login</mat-icon>
+    </mat-list-item>
+     <span>....</span>
+    <mat-divider ></mat-divider>
+    <mat-list-item>
+      <mat-icon class="text-black"> login</mat-icon>
+    </mat-list-item>
+     <span>....</span>
+    <mat-divider ></mat-divider>
 
+  </mat-list>
+ <!-- <p *ngIf="showFiller"> Click me here </p> -->
   </mat-drawer>
-      <mat-toolbar class=" bg-cyan-400 mat-elevation-z10  fixed" >
+      <mat-toolbar class=" bg-cyan-400 mat-elevation-z10 " >
         <div *ngIf="drawer.opened && showFiller">
           <button (click)="showFiller = !showFiller" mat-raised-button> <- </button></div>
           <div *ngIf="drawer.opened && !showFiller">
             <button (click)="showFiller = !showFiller" mat-raised-button> -> </button></div>
       </mat-toolbar>
-      <div class="app-sidenav-content">
+      <div >
     <div class="wrapper">
     <router-outlet></router-outlet>
     </div>
@@ -32,4 +50,6 @@
 
 
 </mat-drawer-container>
-
+<div >
+<mat-toolbar class="bg-blue-200" ></mat-toolbar>
+</div>
