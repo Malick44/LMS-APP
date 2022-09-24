@@ -8,6 +8,7 @@ import { MatDivider } from '@angular/material/divider';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+email: any;
 
   constructor() { }
 
