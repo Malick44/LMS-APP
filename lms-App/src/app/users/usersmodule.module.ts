@@ -14,7 +14,7 @@ import { CourseComponent } from './course/course.component';
 import { TestComponent } from './test/test.component';
 import { RatingsComponent } from './ratings/ratings.component';
 import { InstructorComponent } from './instructor/instructor.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 
 
 
