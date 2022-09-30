@@ -4,7 +4,7 @@
 </div>
 
 
-<mat-drawer-container class=" bg-white app-container font-sans text-red-800 " autosize>
+<mat-drawer-container class=" bg-white app-container font-sans" autosize>
   <mat-drawer #drawer class="
  " [opened]="!isScreenSmall"
   [mode]="isScreenSmall ? 'push' : 'side'">
@@ -13,16 +13,17 @@
        <div>
         <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
         <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-        <span class="ml-3">Dashboard</span>
-     </a>
+        <span *ngIf="showFiller" class="ml-3">Dashboard</span>
+      </a>
+
     </div>
 
     <div class="">
       <a href="#" class="flex items-center p-2 text-sm font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
         <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-600 transition duration-75 dark:text-gray-400 group-hover:text-blue-700 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-        <span class="flex-1 ml-3 whitespace-nowrap">Courses</span>
+        <span *ngIf="showFiller" class="flex-1 ml-3 whitespace-nowrap">Courses</span>
+      </a>
 
-     </a>
 
     </div>
 
@@ -30,12 +31,32 @@
   </mat-nav-list>
  <!-- <p *ngIf="showFiller"> Click me here </p> -->
   </mat-drawer>
-      <mat-toolbar class=" bg-cyan-400 mat-elevation-z10 " >
-        <div class="rounded-full" *ngIf="drawer.opened && showFiller">
-          <button (click)="showFiller = !showFiller" mat-raised-button > <- </button></div>
-          <div *ngIf="drawer.opened && !showFiller">
-            <button (click)="showFiller = !showFiller" mat-raised-button > -> </button></div>
+
+      <mat-toolbar class=" bg-blue-900  mat-elevation-z10 ">
+      <div class="flex justify-between w-full font-thin" >
+         <div class="ml-0 w-10 px-0 mt-1">
+            <div class="   text-white text-center w-10 h-8 border-2 bg-opacity-100" *ngIf="drawer.opened && showFiller">
+          <mat-icon (click)="showFiller = !showFiller" mat-raised-button >keyboard_double_arrow_left</mat-icon>
+        </div>
+          <div *ngIf="drawer.opened && !showFiller" class="  text-white text-center  h-8 border-2 bg-opacity-100">
+            <mat-icon (click)="showFiller = !showFiller" mat-raised-button > keyboard_double_arrow_right </mat-icon></div>
+        </div>
+
+            <div></div>
+
+            <div >
+              <div class=" border-2 rounded-full text-center text-white ">
+              <button mat-button [matMenuTriggerFor]="menu">
+                <span > MO</span></button></div>
+
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item >Profile</button>
+                <button mat-menu-item >Logout</button>
+              </mat-menu>
+            </div>
+          </div>
       </mat-toolbar>
+
       <div >
     <div class="wrapper">
     <router-outlet></router-outlet>
@@ -46,6 +67,6 @@
 
 
 </mat-drawer-container>
-<div >
-<mat-toolbar class=" bg-blue-200 " ></mat-toolbar>
+<div class="footer">
+<mat-toolbar class=" bg-blue-900 h-60 bottom-0" ></mat-toolbar>
 </div>

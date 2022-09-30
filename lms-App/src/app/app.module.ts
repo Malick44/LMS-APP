@@ -27,7 +27,7 @@ const routes:Routes=[
 
     BrowserAnimationsModule,
     HttpClientModule,
-    UsersmoduleModule,
+   
 
     RouterModule.forRoot(routes)
 

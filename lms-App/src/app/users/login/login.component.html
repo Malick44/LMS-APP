@@ -1,34 +1,75 @@
+<div class="">
+<div class=" p-6 lg:mx-60 lg:mr-75 lg:mt-32 bg-white rounded-lg border border-gray">
 
-<div class=" p-6 min-w-md lg:m-40 bg-slate-500 rounded-lg border border-gray">
+  <mat-tab-group dynamicHeight >
+    <mat-tab label="Login" >
 
-  <mat-tab-group dynamicHeight>
-    <mat-tab label="Short tab">
 
-        <form class="example-form">
-          <div class="p-2" >
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Favorite food</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="Sushi " >
+        <form  (ngSubmit)="logIn()" [formGroup]="credentials">
+          <div class="p-1" >
+          <mat-form-field class="w-full  lg:min-w-full justify-center" appearance="fill" >
+            <mat-label>email</mat-label>
+            <input matInput placeholder="Ex. Jsm@lms.com" value=""  >
           </mat-form-field>
-
         </div>
-        <div class="login-box mat-elevation-z4 bg-slate-300 w-max">
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Favorite food</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="Sushi " >
+        <div class="p-1" >
+          <mat-form-field class="w-full lg:min-w-full justify-center " appearance="fill" >
+            <mat-label>password</mat-label>
+            <input matInput placeholder="" value="" type="password" >
           </mat-form-field>
-
         </div>
+
+
+         <div class="flex justify-between text-blue-700">
+          <mat-checkbox class=" " > Keep me logged in</mat-checkbox>
+          <button class="justify-end"> Recover password</button>
+        </div>
+        <div class="flex justify-center">
+          <button mat-raised-button color="primary">Login</button>
+        </div>
+
+
         </form>
 
 
     </mat-tab>
-    <mat-tab label="Long tab">
+    <mat-tab label="Create new Account">
       <div class="register-box -box mat-elevation-z4">
-        Large content
+        <form  (ngSubmit)="logIn()" [formGroup]="credentials">
+          <div class="p-1" >
+          <mat-form-field class="w-full  lg:min-w-full justify-center" appearance="fill" >
+            <mat-label>email</mat-label>
+            <input matInput placeholder="Ex. Jsm@lms.com" value=""  >
+          </mat-form-field>
+        </div>
+        <div class="p-1" >
+          <mat-form-field class="w-full lg:min-w-full justify-center " appearance="fill" >
+            <mat-label>password</mat-label>
+            <input matInput placeholder="" value="" type="password" >
+          </mat-form-field>
+        </div>
+        <div class="p-1" >
+          <mat-form-field class="w-full lg:min-w-full justify-center " appearance="fill" >
+            <mat-label>re-enter password</mat-label>
+            <input matInput placeholder="" value="" type="password" >
+          </mat-form-field>
+        </div>
+
+
+         <div class="flex justify-between text-blue-700">
+          <mat-checkbox class=" " > <span class="text-b">I agree</span> to Terms of Use.</mat-checkbox>
+          <button class="justify-end"> Recover password</button>
+        </div>
+        <div class="flex justify-center">
+          <button mat-raised-button color="primary">Login</button>
+        </div>
+
+
+        </form>
       </div>
     </mat-tab>
   </mat-tab-group>
+</div>
 </div>
 
 

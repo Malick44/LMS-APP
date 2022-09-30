@@ -1,24 +1,35 @@
 
-<div class ="mat-elevation-z30' : true, 'sticky' : isSticky">
+<div class ="mat-elevation-z30 sticky">
   <mat-toolbar class="  bg-white border-gray-200
    px-2 sm:px-4 py-2.5 text-blue-600  font-thin" >
-   <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <button mat-icon-button class="example-icon"
+
+   <div class="container flex justify-between items-center mx-auto">
+    <div>
+      <button mat-icon-button class="example-icon"
    aria-label="Example icon-button with menu icon"
    (click)="toggleSidenav.emit()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>LMS App</span>
+  <button [routerLink]="'/lmsApp/Home'" >
+    <span class="mt-5">LMS App</span></button>
+</div>
+
 
   <span class="example-spacer"></span>
-<div >
+  <div class=" mr-5 mt-2 lg:mr-40 flex w-28   md:w-40 justify-between  text-black">
+    <button><mat-icon> language</mat-icon></button>
+    <button><mat-icon>notifications </mat-icon></button>
+    <button><mat-icon> chat</mat-icon></button>
+  </div>
+
+<div class="  mr-5 hidden md:block  ">
    <button mat-button class="text-neutral-900 text-sm font-serif ">Primary</button>
   <button mat-button class="text-neutral-900 text-sm font-serif " >{{loggedInUser}}</button></div>
 
 
   <div class="app-button-row">
 
-    <button mat-raised-button  class="col-start-auto font-serif">Login</button>
+    <button mat-raised-button [routerLink]="'/lmsApp/login'" class="col-start-auto font-serif">Login</button>
   </div>
 
 
