@@ -1,12 +1,23 @@
 package com.model;
 
+import lombok.*;
+
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Content {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int contentId;
     private int courseId;
-    private List<ContentSection>sectionList;
-    private List<SectionParagraph>sectionParagraphList;
-    private List<MediaFile> mediaUrlList;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "content")
+    private List<Section>sectionList = new ArrayList<>();
 
 }
