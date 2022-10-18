@@ -9,14 +9,16 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Flashcard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int Id;
-    private int courseId;
+    private Integer Id;
+    private Integer courseId;
     private String title;
     private String Question;
 

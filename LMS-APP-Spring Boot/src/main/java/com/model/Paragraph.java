@@ -1,8 +1,16 @@
 package com.model;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "praragraph")
 public class Paragraph {
     @Id

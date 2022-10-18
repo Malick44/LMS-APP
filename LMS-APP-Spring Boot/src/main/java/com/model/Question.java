@@ -8,15 +8,15 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int questionId;
-    private int courseId;
+    private Integer questionId;
+    private Integer courseId;
     private String explanation;
-   @OneToMany(fetch = FetchType.LAZY, mappedBy = "question")
-   private List<Answer> answerList = new ArrayList<>();
-
+  // private List<Answer> answerList = new ArrayList<>();
 }

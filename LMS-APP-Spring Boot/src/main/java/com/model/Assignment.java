@@ -9,12 +9,14 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Assignment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private int userId;
+    private Integer id;
+    private Integer userId;
     private boolean isCompleted;
 }

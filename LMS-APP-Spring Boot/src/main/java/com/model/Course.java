@@ -9,6 +9,8 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Course {
@@ -16,7 +18,7 @@ public class Course {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private  int courseId;
+    private  Integer courseId;
 
     private String Category;
     private String title;
@@ -32,8 +34,8 @@ public class Course {
     private Duration duration;
     private String keywords;
     private String language= "en-US";
-    private int Year;
-    private int view;
+    private Integer Year;
+    private Integer view;
     private String price;
     private static Long views;
 

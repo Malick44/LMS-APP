@@ -1,9 +1,6 @@
 package com.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,12 +9,14 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class ContentSection {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int contentSectionId;
-    private int contentId;
+    private Integer contentSectionId;
+    private Integer contentId;
     private String title;
 }

@@ -10,13 +10,15 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int contentId;
-    private int courseId;
+    private Integer contentId;
+    private Integer courseId;
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "content")
     private List<Section>sectionList = new ArrayList<>();
 

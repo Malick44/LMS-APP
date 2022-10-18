@@ -8,17 +8,17 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Assessment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int assessmentId;
-
-
-    private int userId;
-    private int courseId;
+    private Integer assessmentId;
+    private Integer userId;
+    private Integer courseId;
   //  private List<Question> assessmentQuestionList;
-    private int score;
+    private Integer grade;
     private boolean isClear;
 }
