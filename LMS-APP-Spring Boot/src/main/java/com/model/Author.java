@@ -10,8 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "author")

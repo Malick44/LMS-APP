@@ -8,10 +8,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
 @NoArgsConstructor
-@AllArgsConstructor
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

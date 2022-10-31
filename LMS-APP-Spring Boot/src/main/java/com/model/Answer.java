@@ -1,16 +1,16 @@
 package com.model;
 
 import lombok.*;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@EqualsAndHashCode
 @Entity
 @Table(name = "answer")
+@Component
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

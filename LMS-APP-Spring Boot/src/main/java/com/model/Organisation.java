@@ -9,10 +9,7 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
 @NoArgsConstructor
-@AllArgsConstructor
 public class Organisation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

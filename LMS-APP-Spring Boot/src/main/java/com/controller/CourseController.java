@@ -1,26 +1,36 @@
 package com.controller;
 
 import com.model.Course;
+import com.dto.CourseDto;
 import com.service.CourseService;
-import com.service.CourseService;
+import com.service.CourseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/course")
 public class CourseController {
-    @Autowired
-    private CourseService courseService;
+    //@Autowired
+    private CourseService courseService = new CourseServiceImpl();
+    @GetMapping
+    public String getCourse(@PathVariable Integer courseId) {
 
-    public ResponseEntity<Course> getCourse(Integer courseId){
+        Course course = courseService.getCourse(courseId);
+
+        return course.getDescription();
+    }
+    @PostMapping
+    public ResponseEntity<Course> createCourse(CourseDto courseDto){
 
 
-        ResponseEntity<Course>  course = courseService.getCourse(Integer courseId);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 
-        return null;
-
+    @GetMapping("/test")
+    public String test() {
+        return "LMS in dev mode";
     }
 
 }

@@ -9,10 +9,7 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
 @NoArgsConstructor
-@AllArgsConstructor
 public class Quiz_Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

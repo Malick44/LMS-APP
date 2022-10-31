@@ -1,27 +1,25 @@
 package com.model;
 
 import lombok.*;
+import org.springframework.stereotype.Component;
+
 
 import javax.persistence.*;
-import javax.print.attribute.standard.Media;
 import java.time.Duration;
 import java.util.List;
-@Entity
+
 @Getter
-@Setter
-@ToString
-@EqualsAndHashCode
-@NoArgsConstructor
+@Builder
 @AllArgsConstructor
+@Setter
+@NoArgsConstructor
+@Table(name = "course")
+@Component
+@Entity
 public class Course {
-
-
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private  Integer courseId;
-
-    private String Category;
-    private String title;
 
     @ManyToOne
     @JoinColumn(name = "author_id")
@@ -38,12 +36,11 @@ public class Course {
     private Integer view;
     private String price;
     private static Long views;
-
-    @ManyToOne
-    @JoinColumn(name = "contentId")
-    private Content content;
-
-
+    private String Category;
+    private String title;
+    @Singular
+    @OneToMany(cascade = {CascadeType.ALL},fetch = FetchType.LAZY, mappedBy = "course")
+    private List<Section> sections;
 
 
 
