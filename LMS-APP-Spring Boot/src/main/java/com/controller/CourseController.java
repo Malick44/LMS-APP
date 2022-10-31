@@ -3,7 +3,6 @@ package com.controller;
 import com.model.Course;
 import com.dto.CourseDto;
 import com.service.CourseService;
-import com.service.CourseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +11,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/course")
 public class CourseController {
-    //@Autowired
-    private CourseService courseService = new CourseServiceImpl();
-    @GetMapping
+
+    private final CourseService courseService;
+    public CourseController(CourseService courseService) {
+        this.courseService = courseService;
+    }
+
+    @GetMapping("/{courseId}")
     public String getCourse(@PathVariable Integer courseId) {
 
         Course course = courseService.getCourse(courseId);

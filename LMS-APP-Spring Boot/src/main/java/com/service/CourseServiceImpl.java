@@ -2,7 +2,6 @@ package com.service;
 
 import com.model.Course;
 import com.dto.CourseDto;
-import com.model.Section;
 import com.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

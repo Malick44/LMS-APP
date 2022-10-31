@@ -1,8 +1,6 @@
 package com.model;
 
 import lombok.*;
-import org.springframework.stereotype.Component;
-
 
 import javax.persistence.*;
 import java.time.Duration;
@@ -13,8 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @Setter
 @NoArgsConstructor
-@Table(name = "course")
-@Component
+@Table
 @Entity
 public class Course {
     @GeneratedValue(strategy = GenerationType.AUTO)
