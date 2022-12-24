@@ -8,7 +8,7 @@
 
 .app-sidenav-content {
   display: flex;
-  height: 600px;
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -17,7 +17,7 @@
 }
 .wrapper {
   margin: 20px;
-  height: 600px;
+  height: 100vh;
 }
 .mat-drawer{
   height: 100%;

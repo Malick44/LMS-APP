@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { SidenavComponent } from './mainframe/sidenav.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CourseComponent } from './course/course.component';
