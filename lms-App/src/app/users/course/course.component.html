@@ -1,2 +1,221 @@
 <p>course works!</p>
 
+<mat-drawer-container class="course-container" [class.dark-theme]="isDarkTheme"  autosize>
+
+    <mat-drawer #drawer class="course-sidenav  " [opened]="!isScreenSmall"
+    [mode]="isScreenSmall ? 'push' : 'side'" >
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+    
+        <mat-toolbar class="">
+            <button type="button" mat-button (click)="drawer.toggle()">
+                Toggle sidenav
+              </button>
+        </mat-toolbar>
+
+        <!-- <iframe class="bg-slate-400"></iframe> -->
+        <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+              <span class=" text-blue-900 hljs-keyword">adipisicing</span>  elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+          <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+          <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+          <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+          <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+          <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+          <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+          <P>
+            corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+             aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+             corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda nisi ipsam unde distinctio iste sit molestiae in
+              exercitationem, aut ut aliquid libero id expedita sint excepturi
+              rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                molestiae in exercitationem, aut ut aliquid libero id expedita sint
+                 excepturi rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet
+                 consectetur adipisicing elit. Assumenda nisi ipsam unde distinctio
+                  iste sit molestiae in exercitationem, aut ut aliquid libero id
+                  expedita sint excepturi rem consequuntur ad corrupti!Lorem,
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                  nisi ipsam unde distinctio iste sit molestiae in exercitationem,
+                   aut ut aliquid libero id expedita sint excepturi rem consequuntur
+                   ad corrupti!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda nisi ipsam unde distinctio iste sit molestiae in
+                    exercitationem, aut ut aliquid libero id expedita sint excepturi
+                     rem consequuntur ad corrupti!Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. Assumenda nisi ipsam unde distinctio iste sit
+                       molestiae in exercitationem
+            , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
+          </P>
+  </mat-drawer-container>

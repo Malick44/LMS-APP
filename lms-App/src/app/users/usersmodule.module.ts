@@ -26,6 +26,7 @@ const routes:Routes =[
     {path: "register", component:RegisterComponent},
     {path: "course", component:CourseComponent},
     {path: "test", component:TestComponent}
+    
 ]},
 
   {path: '**', redirectTo: ''}

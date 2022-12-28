@@ -1,13 +1,9 @@
-<div class="">
-  <app-toolbar (toggleSidenav)="drawer.toggle()" class="">
-</app-toolbar>
-</div>
 
+<mat-drawer-container class="  bg-white app-container font-sans primary" [class.dark-theme]="isDarkTheme" autosize>
 
-<mat-drawer-container class=" bg-white app-container font-sans primary" [class.dark-theme]="isDarkTheme" autosize>
   <mat-drawer #drawer class="
  " [opened]="!isScreenSmall"
-  [mode]="isScreenSmall ? 'push' : 'side'">
+  [mode]="isScreenSmall ? 'push' : 'side' ">
 
   <mat-nav-list  >
        <div>
@@ -41,6 +37,8 @@
   </mat-nav-list>
  <!-- <p *ngIf="showFiller"> Click me here </p> -->
   </mat-drawer>
+  <app-toolbar (toggleSidenav)="drawer.toggle()" class=" sticky top-0 ">
+  </app-toolbar>
 
       <mat-toolbar class=" mat-primary  mat-elevation-z10 ">
       <div class="flex justify-between w-full font-thin" >
@@ -67,16 +65,16 @@
           </div>
       </mat-toolbar>
 
-      <div >
-    <div class="wrapper">
+
+    <div class="wrapper" >
     <router-outlet></router-outlet>
     </div>
 
-    </div>
 
-
+    <mat-toolbar class=" bg-blue-900 h-20 bottom-0" ></mat-toolbar>
 
 </mat-drawer-container>
-<div class="footer">
-<mat-toolbar class=" bg-blue-900 h-40 bottom-0" ></mat-toolbar>
-</div>
+
+
+
+
