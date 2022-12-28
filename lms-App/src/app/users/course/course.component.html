@@ -1,8 +1,11 @@
-<p>course works!</p>
+<div>
+  <button type="button" mat-button (click)="drawer.toggle()">
+                Toggle sidenav
+              </button>
 
 <mat-drawer-container class="course-container" [class.dark-theme]="isDarkTheme"  autosize>
 
-    <mat-drawer #drawer class="course-sidenav  " [opened]="!isScreenSmall"
+    <mat-drawer #drawer class="course-sidenav " [opened]="!isScreenSmall"
     [mode]="isScreenSmall ? 'push' : 'side'" >
       <p>Auto-resizing sidenav</p>
       <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
@@ -10,11 +13,9 @@
         Toggle extra text
       </button>
     </mat-drawer>
-    
+
         <mat-toolbar class="">
-            <button type="button" mat-button (click)="drawer.toggle()">
-                Toggle sidenav
-              </button>
+
         </mat-toolbar>
 
         <!-- <iframe class="bg-slate-400"></iframe> -->
@@ -219,3 +220,4 @@
             , aut ut aliquid libero id expedita sint excepturi rem consequuntur ad
           </P>
   </mat-drawer-container>
+</div>

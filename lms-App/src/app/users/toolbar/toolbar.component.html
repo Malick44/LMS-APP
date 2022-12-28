@@ -1,14 +1,14 @@
 
 
   <mat-toolbar class=" mat-elevation-z15 bg-white border-gray-200
-   px-2 sm:px-4 py-2.5 text-blue-600  font-thin" >
+   px-2 sm:px-4 py-2.5 text-blue-600  font-thin" (click)="toggleSidenav.emit()" >
 
    <div class="container flex justify-between items-center mx-auto">
     <div>
       <button mat-icon-button class="example-icon"
    aria-label="Example icon-button with menu icon"
    (click)="toggleSidenav.emit()">
-    <mat-icon>menu</mat-icon>
+    <mat-icon >menu</mat-icon>
   </button>
   <button [routerLink]="'/lmsApp/Home'" >
     <span class="mt-5">LMS App</span></button>
