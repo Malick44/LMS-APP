@@ -1,7 +1,7 @@
-
+ <app-toolbar  (toggleSidenav)="drawer.toggle()" class=" sticky top-0 ">
+  </app-toolbar>
 <mat-drawer-container class="  bg-white app-container font-sans primary" [class.dark-theme]="isDarkTheme" autosize>
-<app-toolbar  (toggleSidenav)="drawer.toggle()" class=" sticky top-0 ">
-</app-toolbar>
+
   <mat-drawer #drawer class="
  " [opened]="!isScreenSmall"
   [mode]="isScreenSmall ? 'push' : 'side' ">
@@ -39,8 +39,8 @@
  <!-- <p *ngIf="showFiller"> Click me here </p> -->
   </mat-drawer>
 
-
-      <mat-toolbar class=" mat-accent  mat-elevation-z10 ">
+    <div class="wrapper" >
+     <div><mat-toolbar class=" mat-accent  mat-elevation-z10 ">
       <div class="flex justify-between flex-wrap w-full font-thin" >
          <div class="ml-0 w-10 px-0 mt-1">
             <div class="   text-white text-center w-10 h-8 border-2 bg-opacity-100" *ngIf="drawer.opened && showFiller">
@@ -49,10 +49,7 @@
           <div *ngIf="drawer.opened && !showFiller" class="  text-white text-center  h-8 border-2 bg-opacity-100">
             <mat-icon (click)="showFiller = !showFiller" mat-raised-button > keyboard_double_arrow_right </mat-icon></div>
         </div>
-
-            <div></div>
-
-            <div >
+            <div class="" >
               <div class=" border-2 rounded-full text-center text-white h-10">
               <button mat-button [matMenuTriggerFor]="menu">
                 <span > MO</span></button></div>
@@ -63,18 +60,15 @@
               </mat-menu>
             </div>
           </div>
-      </mat-toolbar>
-
-
-    <div class="wrapper" >
-    <router-outlet></router-outlet>
-    <mat-toolbar class=" bg-blue-900 h-20 bottom-0" ></mat-toolbar>
+      </mat-toolbar></div>
+        <div><router-outlet></router-outlet></div>
     </div>
 
 
 
 
 </mat-drawer-container>
+<div> <mat-toolbar class=" bg-blue-900 h-10 bottom-0" ></mat-toolbar></div>
 
 
 
