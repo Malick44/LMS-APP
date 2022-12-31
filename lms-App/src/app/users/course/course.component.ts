@@ -2,6 +2,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
+import { formField } from 'aws-amplify';
 import { NavigationRoute } from '../navigationRoute';
 
 const SMALL_WIDTH_BREAKPOINT = 768;
@@ -13,7 +14,9 @@ const SMALL_WIDTH_BREAKPOINT = 768;
 export class CourseComponent implements OnInit {
 
   public isScreenSmall!: boolean;
+ fontSize:string[]=[];
   showFiller = false;
+
   navigationroute!:NavigationRoute;
 
   isDarkTheme: boolean = false;
@@ -41,6 +44,7 @@ export class CourseComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         this.isScreenSmall = state.matches;
         this.showFiller=true;
+
       });
 
 

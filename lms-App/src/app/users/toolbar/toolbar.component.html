@@ -1,12 +1,12 @@
 
 
   <mat-toolbar class=" mat-elevation-z15 bg-white border-gray-200
-   px-2 sm:px-4 py-2.5 text-blue-600  font-thin" (click)="toggleSidenav.emit()" >
+   px-2 sm:px-4 py-2.5 text-blue-600  font-thin"  >
 
    <div class="container flex justify-between items-center mx-auto">
     <div>
       <button mat-icon-button class="example-icon"
-   aria-label="Example icon-button with menu icon"
+   aria-label="icon-button with menu icon"
    (click)="toggleSidenav.emit()">
     <mat-icon >menu</mat-icon>
   </button>
@@ -22,7 +22,7 @@
     <button><mat-icon> chat</mat-icon></button>
   </div>
 
-<div class="  mr-5 hidden md:block  ">
+<div class="mr-5 hidden md:block  ">
    <button mat-button class="text-neutral-900 text-sm font-serif ">Primary</button>
   <button mat-button class="text-neutral-900 text-sm font-serif " >{{loggedInUser}}</button></div>
 
