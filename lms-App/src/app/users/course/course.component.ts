@@ -2,7 +2,6 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
-import { formField } from 'aws-amplify';
 import { NavigationRoute } from '../navigationRoute';
 
 const SMALL_WIDTH_BREAKPOINT = 768;
