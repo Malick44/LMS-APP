@@ -1,6 +1,6 @@
- <app-toolbar  (toggleSidenav)="drawer.toggle()" class=" relative">
+ <app-toolbar  (toggleSidenav)="drawer.toggle()" class=" relative ">
   </app-toolbar>
-<mat-drawer-container class="  bg-white app-container font-sans primary" [class.dark-theme]="isDarkTheme" autosize>
+<mat-drawer-container class=" bg-yellow-500 app-container font-sans " [class.dark-theme]="isDarkTheme" autosize>
 
   <mat-drawer #drawer class="
  " [opened]="!isScreenSmall"
@@ -39,7 +39,8 @@
  <!-- <p *ngIf="showFiller"> Click me here </p> -->
   </mat-drawer>
 
-  <div><mat-toolbar class=" mat-accent  mat-elevation-z10 ">
+  <div *ngIf="">
+    <mat-toolbar class=" mat-accent  mat-elevation-z10 ">
     <div class="flex justify-between flex-wrap w-full font-thin" >
        <div class="ml-0 w-10 px-0 mt-1">
           <div class="   text-white text-center w-10 h-8 border-2 bg-opacity-100" *ngIf="drawer.opened && showFiller">
@@ -67,7 +68,7 @@
     </div>
 
 </mat-drawer-container>
-<div> <mat-toolbar class=" bg-blue-900 h-10 bottom-0" ></mat-toolbar></div>
+
 
 
 
